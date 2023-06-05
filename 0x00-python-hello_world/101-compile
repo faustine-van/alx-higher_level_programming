@@ -1,21 +1,2 @@
-#!/usr/bin/python3
-import os
-import py_compile
-# get name from evironment variable
-name = os.environ.get('PYFILE')
-if not name:
-    exit(1)
-
-namec = name + 'c'
-
-
-def compile(name, namec):
-    try:
-        py_compile.compile(name, namec)
-        print(f"Compiling {name} ...")
-    except py_compile.PycompileError as e:
-        print(e)
-
-
-# Call the compile_file function with the given file names
-compile(name, namec)
+#!/bin/bash
+python3 -m py_compile "$PYFILE"
