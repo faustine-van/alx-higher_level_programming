@@ -5,7 +5,7 @@
 * Project1 : Python - Hello, World
 * Project2 : Python - if/else, loops, functions
 
-- man or help
+### man or help
 
 * `python3`
 
