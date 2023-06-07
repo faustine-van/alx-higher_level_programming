@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 	listint_t *new_head, *newHead = list;
 	new_head = list;
 
-	while(newHead && new_head)
+	while(newHead && new_head && newHead->next)
 	{
 		new_head = new_head->next;
 		newHead = newHead->next->next;
