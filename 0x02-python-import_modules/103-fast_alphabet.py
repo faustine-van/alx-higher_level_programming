@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-str = __import__('string').ascii_uppercase
-print("{}".format(str))
+import string
+__import__('sys').stdout.write(getattr(string, 'ascii_uppercase') + '\n')
