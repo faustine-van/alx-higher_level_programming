@@ -4,6 +4,8 @@
 
 * Project1 : Python - Hello, World
 * Project2 : Python - if/else, loops, functions
+* project3 : Python - import & modules
+* project4 : Python - Data Structures: Lists, Tuples
 
 ### man or help
 
