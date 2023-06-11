@@ -2,5 +2,6 @@
 
 def print_list_integer(my_list=[]):
     for a in range(len(my_list)):
-            print("{:d}".format(my_list[a]))
+        print("{:d}".format(my_list[a]))
 # instead of instance use print("{:d}".format(my_list[a]))
+# if (all(isinstance(elem, int) for elem in my_list)):
