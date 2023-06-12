@@ -7,6 +7,6 @@ def delete_at(my_list=[], idx=0):
 # use enumerate to access both element and index
 # for a, x in enumerate(my_list): like this
     for a in range(len(my_list)):
-        if a == idx:
+        if idx == a:
             del my_list[idx]
     return my_list
