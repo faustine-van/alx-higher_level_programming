@@ -16,6 +16,7 @@ class Square:
 
     @size.setter
     def size(self, value):
+        """This square class that defined by Square"""
         if isinstance(value, int):
             if value < 0:
                 raise ValueError("size must be >= 0")
@@ -40,7 +41,8 @@ class Square:
 
     def area(self):
         """This square class that defined by Square"""
-        return self.size ** 2
+        area = self.size ** 2
+        return area
 
     def my_print(self):
         """This square class that defined by Square"""
