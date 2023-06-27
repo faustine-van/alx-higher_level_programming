@@ -50,10 +50,14 @@ class Square:
 
     def my_print(self):
         """This square class that defined by Square"""
-        if self.__size == 0:
+        if self.size == 0:
             print()
         else:
             for _ in range(self.position[1]):
                 print()
             for _ in range(self.size):
-                print(" " * self.position[0] + "#" * self.size)
+                for _ in range(self.position[0]):
+                    print(" ", end="")
+                for _ in range(self.size):
+                    print("#", end="")
+                print()
