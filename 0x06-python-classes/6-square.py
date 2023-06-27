@@ -5,8 +5,11 @@
 
 class Square:
 
-    """This square class that defined by Square"""
+    """This square class that defined by Square
+    """
     def __init__(self, size=0, position=(0, 0)):
+        """initialize size and position
+        """
         self.size = size
         self.position = position
 
