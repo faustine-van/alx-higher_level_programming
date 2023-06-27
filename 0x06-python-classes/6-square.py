@@ -1,4 +1,11 @@
+#!/usr/bin/python3
+
+"""This module is square class"""
+
+
 class Square:
+
+    """This square class that defined by Square"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
@@ -32,9 +39,11 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
+        """This square class that defined by Square"""
         return self.size ** 2
 
     def my_print(self):
+        """This square class that defined by Square"""
         if self.size == 0:
             print()
         else:
