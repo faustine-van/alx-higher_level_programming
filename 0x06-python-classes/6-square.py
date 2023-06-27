@@ -16,7 +16,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """This square class that defined by Square"""
+        """set size setter method"""
         if isinstance(value, int):
             if value < 0:
                 raise ValueError("size must be >= 0")
@@ -31,6 +31,7 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """set position using setter method"""
         self.__position = value
         if (
             not isinstance(value, tuple)
