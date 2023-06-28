@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 
-"""Define a MagicClass matching exactly a bytecode provided by Holberton."""
+"""This module to take  python bytecode to python class called MagicClass"""
 
 import math
 
 
 class MagicClass:
-    """Represent a circle."""
+    """This class is for calculate area and circumference."""
 
-    def __init__(self, radius=0):
-        """Initialize a MagicClass.
+    def __init__(self, radius):
+        """Initialize radius
 
-        Arg:
-            radius (float or int): The radius of the new MagicClass.
+           Argument:
+               radius : which float or int
         """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
@@ -20,9 +20,9 @@ class MagicClass:
         self.__radius = radius
 
     def area(self):
-        """Return the area of the MagicClass."""
+        """Calculate area of circle"""
         return (self.__radius ** 2 * math.pi)
 
     def circumference(self):
-        """Return The circumference of the MagicClass."""
+        """Calculate circumference of circle"""
         return (2 * math.pi * self.__radius)
