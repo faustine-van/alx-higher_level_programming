@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import math
 
-
+import dis
 class MagicClass:
     def __init__(self, radius):
         self._MagicClass__radius = 0
@@ -15,3 +15,5 @@ class MagicClass:
 
     def circumference(self):
         return 2 * math.pi * self._MagicClass__radius
+
+dis.dis(MagicClass)
