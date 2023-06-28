@@ -8,7 +8,11 @@ import math
 class MagicClass:
     """this class is for calculate area and circumference"""
     def __init__(self, radius):
-        """initialize radius"""
+        """initialize radius
+
+           Argument:
+               radius : which float or int
+        """
         self.__MagicClass__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
