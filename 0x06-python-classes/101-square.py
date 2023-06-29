@@ -64,13 +64,15 @@ class Square:
 
     def __str__(self):
         if self.size == 0:
-            return "\n"
+            return ""
 
         square = ""
         for _ in range(self.position[1]):
             square += "\n"
 
-        for _ in range(self.size):
+        for _ in range(self.size - 1):
+            """self.size - 1 done for excluding the last line"""
             square += " " * self.position[0] + "#" * self.size + "\n"
-
-        return square.strip()
+        """this add one"""
+        square += " " * self.position[0] + "#" * self.size
+        return square
