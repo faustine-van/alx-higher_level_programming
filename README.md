@@ -7,6 +7,9 @@
 * project3 : Python - import & modules
 * project4 : Python - Data Structures: Lists, Tuples
 * project4 : Python - More Data Structures: Set, Dictionary
+* Project5 : Python - Exceptions
+* Project6 : Python - Python - Classes and Objects
+* project7 : Python - Test-driven development
 
 ### man or help
 
