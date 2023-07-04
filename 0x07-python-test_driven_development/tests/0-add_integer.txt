@@ -1,0 +1,62 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+Import:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Adding 1, 2
+    >>> add_integer(1, 2)
+    3
+
+Adding float 100.3 and -2
+    >>> add_integer(100.3, -2)
+    98
+
+Adding 100 and -2
+    >>> add_integer(100, -2)
+    98
+
+Adding  number and  float
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+              ...
+    TypeError: b must be an integer
+
+Case None
+    >>> add_integer(None)
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+String only
+    >>> add_integer("School")
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+Case list
+    >>> add_integer([] , 1)
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+Tuples
+    >>> add_integer((4, 5))
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+Case
+    >>> add_integer(float('inf'), 5)
+    Traceback (most recent call last):
+              ...
+    OverflowError: cannot convert float infinity to integer
+
+Case
+    >>> add_integer(float('nan'), 12)
+    Traceback (most recent call last):
+              ...
+    ValueError: cannot convert float NaN to integer

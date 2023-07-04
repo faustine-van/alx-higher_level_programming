@@ -1,0 +1,56 @@
+The ``3-say_my_name`` module
+============================
+
+Using ``say_my_name``
+---------------------
+
+Import
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Passing  first_name and last_name
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+Passing  first_name is number
+    >>> say_my_name(12, "Bob")
+    Traceback (most recent call last):
+    	      ...
+    TypeError: first_name must be a string
+
+Passing  last_name as number
+    >>> say_my_name("Bob", 20)
+    Traceback (most recent call last):
+             ...
+    TypeError: last_name must be a string
+
+Passing  number to lastname and firstname
+    >>> say_my_name(12, 20)
+    Traceback (most recent call last):
+             ...
+    TypeError: first_name must be a string
+
+Passing  list
+    >>> say_my_name([], 20)
+    Traceback (most recent call last):
+             ...
+    TypeError: first_name must be a string
+
+Passing  tuples
+    >>> say_my_name(("Bob", "Julia"), 20)
+    Traceback (most recent call last):
+             ...
+    TypeError: first_name must be a string
+
+
+Passing  dictionary
+    >>> say_my_name({}, 20)
+    Traceback (most recent call last):
+             ...
+    TypeError: first_name must be a string
+
+
+Passing  infinity
+    >>> say_my_name('inf', 20)
+    Traceback (most recent call last):
+             ...
+    TypeError: last_name must be a string
