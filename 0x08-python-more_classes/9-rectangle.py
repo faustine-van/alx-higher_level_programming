@@ -99,8 +99,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            ValueError("size must be >= 0")
+        """returns a new Rectangle instance with width == height == size"""
         return cls(size, size)
