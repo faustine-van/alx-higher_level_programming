@@ -7,7 +7,7 @@ class Rectangle:
     """defines a rectangle """
 
     number_of_instances = 0
-    print_symbol = "string"
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.__width = width
@@ -96,3 +96,9 @@ class Rectangle:
         print("Bye rectangle...")
 
         Rectangle.number_of_instances -= 1
+
+    @classmethod
+    def square(cls, size=0):
+        cls.width = size
+        cls.height = size
+        return cls(size)
