@@ -8,23 +8,15 @@ This module is composed by a class that defines a Rectangle
 
 
 class Rectangle:
-    """ Class that defines a rectangle """
+    """defines a rectangle """
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """ Method that initializes the instance
+        self.__width = width
+        self.__height = height
 
-        Args:
-            width: rectangle width
-            height: rectangle height
-
-
-        """
-
-        self.width = width
-        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -103,47 +95,27 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        """ Method that calculates the Rectangle perimeter
-
-        Returns:
-            rectangle perimeter
-
-
-        """
+        """return perimeter of rectangle"""
 
         if self.width == 0 or self.height == 0:
             return 0
 
-        return (2 * self.width) + (2 * self.height)
+        perimeter = (self.width + self.height) * 2
+        return perimeter
 
     def __str__(self):
-        """ Method that returns the Rectangle #
-
-        Returns:
-            str of the rectangle
-
-
-        """
-
-        rectangle = ""
-
+        """print the rectangle with the character #"""
         if self.width == 0 or self.height == 0:
-            return rectangle
-
-        for i in range(self.height):
-            rectangle += (str(self.print_symbol) * self.width) + "\n"
-
-        return rectangle[:-1]
+            return ""
+        rectangle = ""
+        for _ in range(self.height - 1):
+            rectangle += self.print_symbol * self.width + "\n"
+        rectangle += self.print_symbol * self.width
+        return rectangle
 
     def __repr__(self):
-        """ Method that returns the string represantion of the instance
-
-        Returns:
-            string represenation of the object
-
-        """
-
-        return "Rectangle({:d}, {:d})".format(self.width, self.height)
+        """return a string representation of the rectangl"""
+        return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
         """ Method that prints a message when the instance is deleted
