@@ -10,14 +10,14 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
         Rectangle.number_of_instances += 1
 
     def __repr__(self):
         """return a string representation of the rectangl"""
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"Rectangle({self.width}, {self.height})"
 
     @property
     def width(self):
@@ -54,7 +54,7 @@ class Rectangle:
 
     def area(self):
         """return area of rectangle"""
-        area = self.__width * self.__height
+        area = self.width * self.height
         return area
 
     def perimeter(self):
@@ -63,12 +63,11 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
 
-        perimeter = (self.__width + self.__height) * 2
+        perimeter = (self.width + self.height) * 2
         return perimeter
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """return a string representation of the rectangl"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
 
@@ -84,16 +83,15 @@ class Rectangle:
 
     def __str__(self):
         """print the rectangle with the character #"""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return ""
         rectangle = ""
-        for _ in range(self.__height - 1):
-            rectangle += self.print_symbol * self.__width + "\n"
-        rectangle += self.print_symbol * self.__width
+        for _ in range(self.height - 1):
+            rectangle += self.print_symbol * self.width + "\n"
+        rectangle += self.print_symbol * self.width
         return rectangle
 
     def __del__(self):
-        """return a string representation of the rectangl"""
         class_name = self.__class__.__name__
         print("Bye rectangle...")
 
