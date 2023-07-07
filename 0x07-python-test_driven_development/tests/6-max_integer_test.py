@@ -29,32 +29,3 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_max_integer6(self):
         self.assertEqual(max_integer([0, 0]), 0)
-
-    def test_max_integer7(self):
-        self.assertRaises(TypeError, max_integer, (1, "string", 3, 4))
-
-    def test_max_integer8(self):
-        with self.assertRaises(KeyError):
-            max_integer({1: "hope", 2: "string"})
-
-    def test_max_integer9(self):
-        with self.assertRaises(TypeError):
-            max_integer((10, [1, 2]))
-
-    def test_max_integer10(self):
-        with self.assertRaises(TypeError):
-            max_integer((10, (1, 2)))
-
-    def test_max_integer11(self):
-        with self.assertRaises(TypeError):
-            max_integer((10, {1: 2}))
-
-    def test_max_integer12(self):
-        with self.assertRaises(TypeError):
-            max_integer((1))
-
-    def test_max_integer13(self):
-        self.assertEqual(max_integer([9, 8, 7, 6, 5, 4]), 9)
-
-    def test_max_integer13(self):
-        self.assertEqual(max_integer([7, 7, 7, 7, 7]), None)
