@@ -30,6 +30,9 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_integer6(self):
         self.assertEqual(max_integer([0, 0]), 0)
 
+    def test_max_integer15(self):
+        self.assertEqual(max_integer([3]), 3)
+
     def test_max_integer7(self):
         self.assertRaises(TypeError, max_integer, (1, "string", 3, 4))
 
