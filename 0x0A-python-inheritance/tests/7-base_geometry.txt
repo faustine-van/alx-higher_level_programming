@@ -1,9 +1,80 @@
 The ``7-base_geometry`` module
 ===============================
 
-Using ``integer_validator``
+Using ``BaseGeometry``
 
 Import from:
-    >>> integer_validator = __import__('7-base_geometry').BaseGeometry
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+When  name and value:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", [1, 2,3])
+    Traceback (most recent call last):
+                  ...
+    TypeError: width must be an integer
 
+test_case2:
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+                  ...
+    Exception: area() is not implemented
+
+test_case3:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", (1, 2, 3))
+    Traceback (most recent call last):
+                  ...
+    TypeError: width must be an integer
+
+test_case4:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", "1")
+    Traceback (most recent call last):
+                  ...
+    TypeError: width must be an integer
+
+test_case5:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", {1: 2, 2: 2, 3: 3})
+    Traceback (most recent call last):
+                  ...
+    TypeError: width must be an integer
+
+test_case6:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", 1.2)
+    Traceback (most recent call last):
+                  ...
+    TypeError: width must be an integer
+
+test_case7:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", '1')
+    Traceback (most recent call last):
+                  ...
+    TypeError: width must be an integer
+
+test_case8:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("distance", -4)
+    Traceback (most recent call last):
+                  ...
+    ValueError: distance must be greater than 0
+
+test_case9:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", 12)
+    >>>
+
+test_case10:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", 89)
+    >>>
+
+test_case11:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(my_int, 12)
+    Traceback (most recent call last):
+                  ...
+    NameError: name 'my_int' is not defined
