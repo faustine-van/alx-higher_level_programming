@@ -13,6 +13,27 @@ When  name and value:
                   ...
     TypeError: width must be an integer
 
+When  name and value is string:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+                  ...
+    TypeError: name must be an integer
+
+When  name and value is infinity:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 'inf')
+    Traceback (most recent call last):
+                  ...
+    TypeError: name must be an integer
+
+When  name and value is nan:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 'nan')
+    Traceback (most recent call last):
+                  ...
+    TypeError: name must be an integer
+
 test_case2:
     >>> bg = BaseGeometry()
     >>> bg.area()
