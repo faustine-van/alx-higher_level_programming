@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""Module create empyty class"""
+"""Module create class"""
 
 
 class BaseGeometry:
-    """ class BaseGeometry
-    """
+    """class BaseGeometry"""
     def area(self):
         """ area() method
         """
