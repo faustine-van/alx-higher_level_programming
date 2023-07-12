@@ -34,7 +34,21 @@ When  name and value is nan:
                   ...
     TypeError: name must be an integer
 
+When  boolean:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", True)
+    Traceback (most recent call last):
+                  ...
+    TypeError: name must be an integer
+
 test_case2:
+    >>> bg = BaseGeometry()
+    >>> bg.area(12)
+    Traceback (most recent call last):
+                  ...
+    TypeError: area() takes 1 positional argument but 2 were given
+
+test_case2.1:
     >>> bg = BaseGeometry()
     >>> bg.area()
     Traceback (most recent call last):
@@ -107,3 +121,26 @@ test_case8:
                   ...
     ValueError: distance must be greater than 0
 
+
+When  name only:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name")
+    Traceback (most recent call last):
+                  ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+When  value only:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(1)
+    Traceback (most recent call last):
+                  ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+When  value only:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+                  ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
