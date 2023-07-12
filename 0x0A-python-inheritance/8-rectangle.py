@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """ empty class BaseGeometry
+    """ class BaseGeometry
     """
     def area(self):
         """ area() method
