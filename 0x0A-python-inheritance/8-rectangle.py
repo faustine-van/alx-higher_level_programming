@@ -33,6 +33,9 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """ initialize width ang height
+            args:
+                width: width of rectangle
+                height: height of rectangle
         """
         self.__width = width
         self.__height = height
