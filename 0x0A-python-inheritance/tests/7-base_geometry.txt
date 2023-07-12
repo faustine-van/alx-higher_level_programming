@@ -69,6 +69,27 @@ test_case3:
                   ...
     TypeError: width must be an integer
 
+test_case3.1:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", {1, 2})
+    Traceback (most recent call last):
+                  ...
+    TypeError: width must be an integer
+
+test_case3.2:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", [1])
+    Traceback (most recent call last):
+                  ...
+    TypeError: width must be an integer
+
+test_case3.3:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("width", (1,))
+    Traceback (most recent call last):
+                  ...
+    TypeError: width must be an integer
+
 test_case4:
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("width", "1")
