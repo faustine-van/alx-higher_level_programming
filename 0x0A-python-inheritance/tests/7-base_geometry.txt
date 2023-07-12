@@ -128,6 +128,12 @@ test_case8:
                   ...
     ValueError: distance must be greater than 0
 
+test_case8:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("distance", None)
+    Traceback (most recent call last):
+                  ...
+    TypeError: distance must be an integer
 
 When  name only:
     >>> bg = BaseGeometry()
