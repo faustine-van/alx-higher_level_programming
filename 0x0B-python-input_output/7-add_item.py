@@ -24,8 +24,8 @@ else:
 # except FileNotFoundError:  # This create file if doesn't exist
 #    pass
 
-for i in range(1, argc):
-    data_list.append(args[i])
-
+# for i in range(1, argc):
+#    data_list.append(args[i])
+data_list.extend(args[1:])
 # Save the updated list to "add_item.json"
 save_to_json_file(data_list, "add_item.json")
