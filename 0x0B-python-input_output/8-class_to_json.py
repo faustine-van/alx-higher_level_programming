@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Module"""
-import json
 
 
 def class_to_json(obj):
-    """class to json"""
-    if hasattr(obj, "jsonEnc"):
-        return obj.jsonEnc
-    else:
-        return obj.__dict__
+    """Returns the dictionary description JSON serialization of an object"""
+    json_dict = {}
+    for key, value in obj.__dict__.items():
+        if isinstance(value, (list, dict, str, int, bool)):
+            json_dict[key] = value
+    return json_dict
