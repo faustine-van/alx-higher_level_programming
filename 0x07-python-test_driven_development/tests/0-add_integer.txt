@@ -1,4 +1,4 @@
-The ``0-add_integer`` module
+Traceback (most recent call last):The ``0-add_integer`` module
 ============================
 
 Using ``add_integer``
@@ -31,11 +31,27 @@ Case None
               ...
     TypeError: a must be an integer
 
+Case one missing argument
+    >>> add_integer(5)
+    103
+
 String only
     >>> add_integer("School")
     Traceback (most recent call last):
               ...
     TypeError: a must be an integer
+
+Missing two argument
+    >>> add_integer()
+    Traceback (most recent call last):
+	      ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+add  more than two argument
+    >>> add_integer(1, 2, 3)
+    Traceback (most recent call last):
+	      ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 Case list
     >>> add_integer([] , 1)

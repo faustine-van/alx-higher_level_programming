@@ -16,6 +16,26 @@ Passing Matrix list1
                ...
     TypeError: each row of m_b must be of the same size
 
+
+Passing empty
+    >>> matrix_mul([[5, 6], [7, 8]] , [[]])
+    Traceback (most recent call last):
+               ...
+    ValueError: m_b can't be empty
+
+
+Passing empty list to one argument
+    >>> matrix_mul([[]], [[5, 6], [7, 8]])
+    Traceback (most recent call last):
+               ...
+    ValueError: m_a can't be empty
+
+Passing
+    >>> matrix_mul([1, 2, 3, 4] , [[5, 6], [7, 8]])
+    Traceback (most recent call last):
+               ...
+    ValueError: m_b can't be empty
+
 Passing string in list as first args
     >>> matrix_mul("hello", [[5, 6, 1], [7, 8, 2]])
     Traceback (most recent call last):
@@ -27,6 +47,12 @@ Passing string in list as second args
     Traceback (most recent call last):
                ...
     ValueError: m_a and m_b can't be multiplied
+
+Passing not list of list
+    >>> matrix_mul([1, 2, 3, 4], [[5, 1], [7, 2]])
+    Traceback (most recent call last):
+               ...
+    TypeError: object of type 'int' has no len()
 
 Passing  tuple
     >>> matrix_mul(([1, 2], [3, 4]), ([1, 2], [3, 4]))
