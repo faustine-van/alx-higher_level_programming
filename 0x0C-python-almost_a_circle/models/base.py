@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Module define first class Base"""
 import json
 import csv
@@ -10,7 +11,11 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """initialize id"""
+        """Initialize a new Base.
+
+        Args:
+            id (int): The identity of the new Base.
+        """
         if id is not None:
             self.id = id
         else:
@@ -24,7 +29,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):  # list of instances who inherits of Base
-        """save JSON string representation of list_objs to a file loads()"""
+        """save JSON string representation of list_objs to a file
+        Args:
+            dictionary
+        """
         filename = cls.__name__ + ".json"
         dictio = [obj.to_dictionary() for obj in list_objs]
         json_str = cls.to_json_string(dictio)
@@ -34,12 +42,22 @@ class Base:
             file.write(json_str)
 
     def from_json_string(json_string):
+        """from a  file loads()
+
+        Args:
+            dictionary
+        """
         if json_string is None:
             return "[]"
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """create
+
+        Args:
+            dictionary
+        """
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)  # creates a dummy instance of the class of Re...
         if cls.__name__ == "Square":
@@ -53,7 +71,11 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """returns a list of instances:"""
+        """returns a list of instances:
+
+        Args:
+            cls
+        """
         filename = cls.__name__ + ".json"
         if not exists(filename):
             return "[]"
@@ -65,7 +87,11 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """save data to csv file"""
+        """save data to csv file
+
+        Args:
+            cls
+        """
         filename = cls.__name__ + ".csv"
         with open(filename, 'w') as file:
             if list_objs is None:
@@ -80,7 +106,11 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """load from csv file"""
+        """load data to csv file
+
+        Args:
+            cls
+        """
 
         filename = cls.__name__ + ".csv"
         list_objs = []
