@@ -10,6 +10,8 @@
 * Project5 : Python - Exceptions
 * Project6 : Python - Python - Classes and Objects
 * project7 : Python - Test-driven development
+  and
+* More
 
 ### man or help
 
