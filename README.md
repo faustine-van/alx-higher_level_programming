@@ -43,7 +43,7 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ```
 ## Resources
-- [doc.python.org] (https://docs.python.org/3/tutorial)
+- [doc.python.org](https://docs.python.org/3/tutorial)
 - [Python Programming: An Introduction to Computer Science 3rd edition](https://nibmehub.com/opac-service/pdf/read/Python%20Programming%20_%20an%20introduction%20to%20computer%20science-%203rd%20Edition.pdf)
 ## Authors:
 - MUHAYEMARIYA Faustine | [Github](https://github.com/faustine-van).
