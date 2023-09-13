@@ -8,7 +8,7 @@ if (args.length <= 2) {
   console.log(0);
 } else if (args.length === 3) {
   console.log(0);
-}else{
+} else {
   const sortArgs = args.sort(function (a, b) { return b - a; });
   console.log(sortArgs[3]);
 }
