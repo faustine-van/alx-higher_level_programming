@@ -3,7 +3,7 @@
 class Rectangle {
   constructor (w, h) {
     if (w <= 0 || h <= 0 || w === undefined || h === undefined) {
-      return new Rectangle();
+      return this;
     } else {
       this.width = w;
       this.height = h;
@@ -28,6 +28,7 @@ class Rectangle {
   }
 }
 class Square extends Rectangle {
+  // size parameter must be valid.
   constructor (size) {
     super(size, size);
   }
