@@ -23,6 +23,7 @@ Module patterns
 var, let and const
 JavaScript Tutorial
 Modern JS
+[How can you write a module that automatically exports an object?](http://51elliot.blogspot.com/2012/01/simple-intro-to-nodejs-module-scope.html)
 
 ## More Info
 
