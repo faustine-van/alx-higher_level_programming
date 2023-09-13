@@ -7,10 +7,12 @@
 let count = 0;
 
 function logMe (item) {
-  for (let a = 0; a < arguments.length; a++) {
-    console.log(count + ':' + arguments[a]);
-    // console.log('${count}:${item});
+  /* for (let a = 0; a < arguments.length; a++) {
+     console.log(count + ':' + arguments[a]);
   }
+  */
+
+  console.log(`${count}: ${item}`);
   count++;
 }
 module.exports.logMe = logMe;
