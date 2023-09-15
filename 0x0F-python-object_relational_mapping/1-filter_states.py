@@ -17,10 +17,19 @@ if __name__ == "__main__":
     connection = MySQLdb.connect(
         host="localhost", port=3306, user=args[1], passwd=args[2],
         db=args[3], charset="utf8")
+
+    # Create a cursor object
     cur = connection.cursor()
+
+    # Execute the SQL query to select states with names starting with 'N'
     cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+
+    # Fetch all the rows and display the results
     queryRows = cur.fetchall()
     for row in queryRows:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
+
+    # Close the cursor and the database connection
     cur.close()
     connection.close()
