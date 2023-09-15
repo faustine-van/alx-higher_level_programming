@@ -23,14 +23,18 @@ if __name__ == "__main__":
 
     # Execute the SQL query to select states with names starting with 'N'
     query = "SELECT cities.name FROM cities JOIN states ON cities.state_id =\
-        states.id WHERE states.name = %s ORDER BY cities.id"
-    cur.execute(query, (args[4],))
+        states.id WHERE states.name = %s ORDER BY cities.id ASC"
+    try:
+        cur.execute(query, (args[4],))
 
-    # Fetch all the rows and display the results
-    queryRows = cur.fetchall()
-    # print(queryRows[-1])
-    for row in queryRows:
-        print(row[0], end=", " if row != queryRows[-1] else "\n")
+        # Fetch all the rows and display the results
+        queryRows = cur.fetchall()
+        # print(queryRows[-1])
+        for row in queryRows:
+            print(row[0], end=", " if row != queryRows[-1] else "\n")
+    except MySQLdb.error as e:
+        print(e)
+        sys.exit(1)
 
     # Close the cursor and the database connection
     cur.close()
