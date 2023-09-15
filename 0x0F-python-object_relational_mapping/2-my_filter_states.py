@@ -27,7 +27,8 @@ if __name__ == "__main__":
     # Fetch all the rows and display the results
     queryRows = cur.fetchall()
     for row in queryRows:
-        print(row)
+        if row[1] == args[4]:
+            print(row)
 
     # Close the cursor and the database connection
     cur.close()
