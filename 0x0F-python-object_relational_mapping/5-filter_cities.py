@@ -22,8 +22,8 @@ if __name__ == "__main__":
     cur = connection.cursor()
 
     # Execute the SQL query to select states with names starting with 'N'
-    query = "SELECT cities.name FROM cities\
-        JOIN states ON cities.state_id = states.id WHERE states.name = %s"
+    query = "SELECT cities.name FROM cities JOIN states ON cities.state_id =\
+        states.id WHERE states.name = %s ORDER BY cities.id"
     cur.execute(query, (args[4],))
 
     # Fetch all the rows and display the results
