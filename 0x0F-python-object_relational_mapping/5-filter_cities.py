@@ -33,7 +33,9 @@ if __name__ == "__main__":
     # for i, row in enumerate(queryRows):
     #     print(row[0], end=", " if row != queryRows[-1] else "\n")
     #     print(row[0], end=", " if i < len(queryRows) - 1 else "\n")
+
     print(", ".join(row[0] for row in queryRows))
+
     # Close the cursor and the database connection
     cur.close()
     connection.close()
