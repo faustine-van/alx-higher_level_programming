@@ -1,4 +1,13 @@
 #!/usr/bin/python3
+"""
+lists all states with a name starting with N (upper N) from the database
+script that lists all states from the database hbtn_0e_0_usa
+script should take 3 arguments: mysql username,mysql password and database name
+use the module MySQLdb (import MySQLdb)
+script should connect to a MySQL server running on localhost at port 3306
+Results must be sorted in ascending order by states.id
+
+"""
 import MySQLdb
 import sys
 
