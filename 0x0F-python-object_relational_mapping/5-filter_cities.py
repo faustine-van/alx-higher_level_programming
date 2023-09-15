@@ -30,8 +30,9 @@ if __name__ == "__main__":
     queryRows = cur.fetchall()
 
     # print(queryRows[-1])
-    for row in queryRows:
-        print(row[0], end=", " if row != queryRows[-1] else "\n")
+    for i, row in enumerate(queryRows):
+        # print(row[0], end=", " if row != queryRows[-1] else "\n")
+        print(row[0], end=", " if i < len(queryRows) - 1 else "\n")
 
     # Close the cursor and the database connection
     cur.close()
