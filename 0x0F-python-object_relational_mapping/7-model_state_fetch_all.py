@@ -2,31 +2,33 @@
 """
 lists all State objects from the database hbtn_0e_6_usa
 """
-import sys
-from model_state import Base, State
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+if __name__ == "__main__":
 
-args = sys.argv
-user = args[1]
-pwd = args[2]
-db = args[3]
+    import sys
+    from model_state import Base, State
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
 
-# Create a SQLite database in memory
-engine = create_engine(
-    'mysql+mysqldb://{}:{}@localhost/{}'.format(user, pwd, db),
-    pool_pre_ping=True
-    )
+    args = sys.argv
+    user = args[1]
+    pwd = args[2]
+    db = args[3]
 
-# Create the table
-Base.metadata.create_all(engine)
+    # Create a SQLite database in memory
+    engine = create_engine(
+        'mysql+mysqldb://{}:{}@localhost/{}'.format(user, pwd, db),
+        pool_pre_ping=True
+      )
 
-# Create a session
-Session = sessionmaker(bind=engine)
-session = Session()
+    # Create the table
+    Base.metadata.create_all(engine)
 
-# lists all State objects from the database hbtn_0e_6_usa
-states = session.query(State).all()
+    # Create a session
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-for state in states:
-    print(f"{state.id}: {state.name}")
+    # lists all State objects from the database hbtn_0e_6_usa
+    states = session.query(State).all()
+
+    for state in states:
+        print(f"{state.id}: {state.name}")
