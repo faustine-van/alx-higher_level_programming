@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """
- - script that lists all City objects from the database hbtn_0e_101_usa
- - You must use only one query to the database
- - You must use the state relationship to access to the State object
-   linked to the City object
+   - lists all State objects, and corresponding City objects, contained in
+     the database hbtn_0e_101_usa
 """
 
 from relationship_state import Base, State
@@ -32,11 +30,13 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # script that lists all City objects
-    cities = session.query(City).all()
+    # script that lists all State objects
+    states = session.query(State).all()
 
-    for city in cities:
-        print(f"{city.id}: {city.name} -> {city.state.name}")
+    for state in states:
+        print(f"{state.id}: {state.name}")
+        for city in state.cities:
+            print(f"\t{city.id}: {city.name}")
 
     # close session
     session.close()
