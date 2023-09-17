@@ -9,19 +9,22 @@ In the second part, I used the module SQLAlchemy an Object Relational Mapper (OR
 ## Resources
 
 [Object-relational mappers](https://www.fullstackpython.com/object-relational-mappers-orms.html)
-[mysqlclient/MySQLdb documentation]()
-[MySQLdb tutorial]()
-[SQLAlchemy tutorial]()
-[SQLAlchemy]()
+[mysqlclient/MySQLdb documentation](https://mysqlclient.readthedocs.io/)
+[MySQLdb tutorial](https://www.mikusa.com/python-mysql-docs/index.html)
+[SQLAlchemy tutorial](https://docs.sqlalchemy.org/en/13/orm/tutorial.html)
+[SQLAlchemy](https://docs.sqlalchemy.org/en/13/)
 [mysqlclient/MySQLdb](https://github.com/PyMySQL/mysqlclient)
 [Introduction to SQLAlchemy]()
-[Flask SQLAlchemy]()
-[10 common stumbling blocks for SQLAlchemy newbies]()
-[Python SQLAlchemy Cheatsheet]()
-[SQLAlchemy ORM Tutorial for Python Developers (Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL)]()
-[SQLAlchemy Tutorial]()
+[Flask SQLAlchemy](https://www.youtube.com/playlist?list=PLXmMXHVSvS-BlLA5beNJojJLlpE0PJgCW)
+[10 common stumbling blocks for SQLAlchemy newbies](http://alextechrants.blogspot.com/2013/11/10-common-stumbling-blocks-for.html)
+[Python SQLAlchemy Cheatsheet](https://www.pythonsheets.com/notes/python-sqlalchemy.html)
+[SQLAlchemy ORM Tutorial for Python Developers (Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL)](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/)
+[SQLAlchemy Tutorial](https://overiq.com/sqlalchemy-101/)
 [Python Virtual Environments: A primer](https://realpython.com/python-virtual-environments-a-primer/)
-
+[More about mysql](https://mysql-python.sourceforge.net/MySQLdb.html#some-examples)
+[Mysql injection](https://stackoverflow.com/questions/7929364/python-best-practice-and-securest-way-to-connect-to-mysql-and-execute-queries)
+[Sql injection](https://en.wikipedia.org/wiki/SQL_injection)
+[Interacting with a Database using SQLAlchemy: CRUD Operations](https://vegibit.com/interacting-with-a-database-using-sqlalchemy-crud-operations/)
 ## More Info
 ### Install and activate venv
 
