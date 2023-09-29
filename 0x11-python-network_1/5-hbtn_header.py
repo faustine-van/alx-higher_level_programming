@@ -5,6 +5,7 @@
 import requests
 import sys
 
+
 if __name__ == "main__":
     args = sys.argv
     url = args[1]
