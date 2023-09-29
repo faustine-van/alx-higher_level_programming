@@ -12,4 +12,4 @@ if __name__ == "__main__":
         with urllib.request.urlopen(url) as res:
             print(res.decode())
     except urllib.error.HTTPError as e:
-        print(f"Error code: {e.status_code}")
+        print(f"Error code: {e.code}")
