@@ -6,11 +6,9 @@ the value of the X-Request-Id variable found in the header of the response.
 import urllib.request
 import sys
 
+
 if __name__ == "__main__":
-    try:
-        args = sys.argv[1]
-        with urllib.request.urlopen(args[1]) as res:
-            if 'X-Request-Id' in res.headers:
-                print(res.headers.get('X-Request-Id'))
-    except urllib.error.URLError as e:
-        pass
+    args = sys.argv[1]
+    with urllib.request.urlopen(args[1]) as res:
+        if 'X-Request-Id' in res.headers:
+            print(dict(res.headers).get("X-Request-Id"))
