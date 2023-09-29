@@ -10,5 +10,5 @@ from sys import argv
 if __name__ == "__main__":
 
     email = {"email": argv[2]}
-    res = requests.get(argv[1], email)
+    res = requests.post(argv[1], email)
     print("Your email is: ", res.headers.get("email"))
