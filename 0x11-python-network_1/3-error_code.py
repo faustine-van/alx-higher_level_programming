@@ -10,6 +10,8 @@ if __name__ == "__main__":
     url = sys.argv[1]
     try:
         with urllib.request.urlopen(url) as res:
+            if res.status_code >= 400:
+                print(f"Error code: {res.status_code}")
             print(res.decode())
     except urllib.error.HTTPError as e:
         print(f"Error code: {e.code}")
