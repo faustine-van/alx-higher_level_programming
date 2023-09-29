@@ -9,8 +9,6 @@ import sys
 
 if __name__ == "__main__":
 
-    url = sys.argv
-    d1 = {"email": args[2]}
-    res = requests.post(args[1], data=d1)
-    content = res.headers.get("email")
+    d1 = {'email': sys.argv[2]}
+    res = requests.post(sys.argv[1], data=d1)
     print(content.text)
