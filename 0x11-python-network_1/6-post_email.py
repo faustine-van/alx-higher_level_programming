@@ -12,4 +12,4 @@ if __name__ == "__main__":
     email = {"email": argv[2]}
     res = requests.post(argv[1], data=email)
     content = res.headers.get("email")
-    print("Your email is: ", content)
+    print("Your email is: ", content.text)
