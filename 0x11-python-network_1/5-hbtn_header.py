@@ -8,4 +8,4 @@ import sys
 args = sys.argv
 url = args[1]
 res = requests.get(url)
-print(res.headers['X-Request-Id'])
+print(res.headers.get('X-Request-Id'))
