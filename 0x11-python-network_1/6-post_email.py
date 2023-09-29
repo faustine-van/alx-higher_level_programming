@@ -9,6 +9,6 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    res = requests.get(argv[1])
-    data = {"email": argv[2]}
-    print("Your email is:", res.headers.get(res, data))
+    email = {"email": argv[2]}
+    res = requests.get(argv[1], email)
+    print("Your email is:", res.headers.get("email"))
