@@ -7,7 +7,7 @@ import urllib.request
 from sys import argv
 
 
-if  __name__ == "__main__":
+if __name__ == "__main__":
 
     res = requests.get(argv[1])
     data = {"email": argv[2]}
