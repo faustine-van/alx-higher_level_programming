@@ -11,4 +11,4 @@ if __name__ == "__main__":
 
     d1 = {'email': sys.argv[2]}
     res = requests.post(sys.argv[1], data=d1)
-    print(content.text)
+    print(res.text)
