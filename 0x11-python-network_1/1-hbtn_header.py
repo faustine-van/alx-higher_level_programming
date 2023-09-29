@@ -7,7 +7,10 @@ import urllib.request
 import sys
 
 if __name__ == "__main__":
-    args = sys.argv[1]
-    with urllib.request.urlopen(args[1]) as res:
-        if 'X-Request-Id' in res.headers:
-            print(res.headers.get('X-Request-Id'))
+    try:
+        args = sys.argv[1]
+        with urllib.request.urlopen(args[1]) as res:
+            if 'X-Request-Id' in res.headers:
+                print(res.headers.get('X-Request-Id'))
+    except urllib.error.URLError as e:
+        pass
