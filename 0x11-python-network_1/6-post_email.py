@@ -11,4 +11,5 @@ if __name__ == "__main__":
 
     email = {"email": argv[2]}
     res = requests.post(argv[1], email)
-    print("Your email is: ", res.headers.get("email"))
+    content = res.headers.get("email")
+    print("Your email is: ", content.decode())
