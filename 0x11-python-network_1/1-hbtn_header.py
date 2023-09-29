@@ -12,5 +12,4 @@ if __name__ == "__main__":
     url = urllib.request.Request(args[1])
 
     with urllib.request.urlopen(url) as res:
-        res.info()
-        print(res.get("X-Request-Id"))
+        print(dir(res.headers).get("X-Request-Id"))
