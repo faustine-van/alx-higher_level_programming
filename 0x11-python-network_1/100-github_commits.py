@@ -14,7 +14,10 @@ if __name__ == "__main__":
     response = requests.get(url)
     res = response.json()
 
-    for i in range(10):
-        sha = res[i].get('sha')
-        author = res[i].get('commit').get('author').get('name')
-        print("{}: {}".format(sha, author))
+    try:
+        for i in range(10):
+            sha = res[i].get('sha')
+            author = res[i].get('commit').get('author').get('name')
+            print("{}: {}".format(sha, author))
+   except KeyError:
+       pass
