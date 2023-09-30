@@ -15,7 +15,7 @@ if __name__ == "__main__":
         res = requests.post(url, data=data)
         try:
             json_data = res.json
-            if len(json_data) == 0:
+            if not json_data):
                 print("No result")
             print(f"[{json_data.get('id')}] {json_data.get('name')}")
         except ValueError:
