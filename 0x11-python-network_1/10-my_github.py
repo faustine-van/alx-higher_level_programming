@@ -17,7 +17,7 @@ if __name__ == "__main__":
     my_token = sys.argv[2]
     url = "https://api.github.com/users/" + my_user_name
 
-    headers = {'Authorization':f'token {my_token}'}
+    headers = {'Authorization': f'token {my_token}'}
 
     res = requests.get(url, headers=headers)
     if res.status_code != 200:
