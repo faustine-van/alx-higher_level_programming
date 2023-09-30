@@ -8,17 +8,19 @@ import json
 
 
 if __name__ == "__main__":
-    letter = sys.argv[1]
+    if len(sys.argv) >= 2:
+        letter = sys.argv[1]
+    else:
+        letter = {"q": ""}
+
     url = "http://0.0.0.0:5000/search_user"
     data = {"q": letter}
-    if len(sys.argv) >= 2:
-        res = requests.post(url, data=data)
-        try:
-            json_data = res.json
-            if not json_data):
-                print("No result")
+    res = requests.post(url, data=data)
+    try:
+        json_data = res.json
+        if not json_data:
+            print("No result")
+        else:
             print(f"[{json_data.get('id')}] {json_data.get('name')}")
-        except ValueError:
-            print("Not a valid JSON")
-    else:
-        data = {"q": ""}
+    except ValueError:
+        print("Not a valid JSON")
