@@ -12,7 +12,6 @@ if __name__ == "__main__":
         letter['q'] = sys.argv[1]
 
     url = "http://0.0.0.0:5000/search_user"
-    data = {"q": letter}
     res = requests.post(url, data=data)
     try:
         json_data = res.json
