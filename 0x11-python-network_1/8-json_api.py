@@ -14,9 +14,9 @@ if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     res = requests.post(url, data=data)
     try:
-        json_data = res.json
+        json_data = res.json()
         if json_data:
-            print("[{}] {}".format(json_data.text.get('id'), json_data.text.get('name')))
+            print("[{}] {}".format(json_data.get('id'), json_data.get('name')))
         else:
             print("No result")
     except ValueError:
