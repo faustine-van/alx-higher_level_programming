@@ -7,6 +7,7 @@ import sys
 
 
 if __name__ == "__main__":
+    data = {"q": letter}
     if len(sys.argv) == 2:
         letter = sys.argv[1]
     else:
@@ -17,9 +18,9 @@ if __name__ == "__main__":
     res = requests.post(url, data=data)
     try:
         json_data = res.json
-        if not json_data:
-            print("No result")
+        if json_data:
+            print("[{}] {}".format(json_data['id'], json_data['name']))
         else:
-            print("[{}] {}".format(json_data.get('id'), json_data.get('name')))
+            print("No result")
     except ValueError:
         print("Not a valid JSON")
