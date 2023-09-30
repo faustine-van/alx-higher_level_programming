@@ -16,7 +16,7 @@ if __name__ == "__main__":
     try:
         json_data = res.json
         if json_data:
-            print("[{}] {}".format(json_data['id'], json_data['name']))
+            print("[{}] {}".format(json_data.get('id'), json_data.get('name')))
         else:
             print("No result")
     except ValueError:
