@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# fetches https://alx-intranet.hbtn.io/status use the package requests
+""" fetches https://alx-intranet.hbtn.io/status use the package requests
+"""
 import requests
 
 url = "https://alx-intranet.hbtn.io/status"
