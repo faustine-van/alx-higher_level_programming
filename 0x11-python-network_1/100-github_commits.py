@@ -19,5 +19,5 @@ if __name__ == "__main__":
             sha = res[i].get('sha')
             author = res[i].get('commit').get('author').get('name')
             print("{}: {}".format(sha, author))
-   except KeyError:
-       pass
+    except KeyError:
+        pass
