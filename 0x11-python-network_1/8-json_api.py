@@ -17,9 +17,6 @@ if __name__ == "__main__":
             json_data = res.json
             if len(json_data) == 0:
                 print("No result")
-            user = json_data[0]
-            print(f"[{user.get('id')}] {user.get('name')}")
+            print(f"[{json_data.get('id')}] {json_data.get('name')}")
         except ValueError:
             print("Not a valid JSON")
-    else:
-        q = ""
