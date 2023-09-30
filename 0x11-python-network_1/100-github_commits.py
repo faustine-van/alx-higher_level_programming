@@ -15,7 +15,7 @@ if __name__ == "__main__":
     res = response.json()
 
     try:
-        for i in range(1, 10):
+        for i in range(10):
             sha = res[i].get('sha')
             author = res[i].get('commit').get('author').get('name')
             print("{}: {}".format(sha, author))
