@@ -8,16 +8,16 @@ import sys
 
 
 if __name__ == "__main__":
-    repos_name = sys.argv[1]
+    repo = sys.argv[1]
     owner = sys.argv[2]
-    url = "https://api.github.com/repos/{}/{}/commits".format(owner, repos_name)
+    url = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
     response = requests.get(url)
     res = response.json()
 
     try:
         for i in range(10):
-            sha = res[i].get('sha')
-            author = res[i].get('commit').get('author').get('name')
-            print("{}: {}".format(sha, author))
+            print("{}: {}".format(
+                  res[i].get('sha'),
+                  res[i].get('commit').get('author').get('name')))
     except KeyError:
         pass
