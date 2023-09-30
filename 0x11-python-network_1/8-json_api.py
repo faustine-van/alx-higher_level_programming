@@ -7,11 +7,9 @@ import sys
 
 
 if __name__ == "__main__":
-    data = {"q": letter}
+    data = {'q': ""}
     if len(sys.argv) == 2:
-        letter = sys.argv[1]
-    else:
-        letter = ""
+        letter['q'] = sys.argv[1]
 
     url = "http://0.0.0.0:5000/search_user"
     data = {"q": letter}
