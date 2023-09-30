@@ -14,10 +14,14 @@ import sys
 
 if __name__ == "__main__":
     my_user_name = sys.argv[1]
-    my_pass = sys.argv[2]
+    my_token = sys.argv[2]
     url = "https://api.github.com/users/" + my_user_name
 
-    res = requests.get(url, auth=HTTPBasicAuth(my_user_name, my_pass))
-    res1 = res.json()
-    print(res1.get('id'))
-# print(final_one.get('id'))
+    headers = {'Authorization':f'token {my_token}'}
+
+    res = requests.get(url, headers=headers)
+    if res.status_code != 200:
+        print(None)
+    else:
+        res1 = res.json()
+        print(res1.get('id'))
