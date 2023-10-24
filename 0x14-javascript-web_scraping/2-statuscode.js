@@ -5,7 +5,11 @@ const process = require('process')
 const args = process.argv
 const url = args[2]
 
-request(url, function (error, response) {
+request.get(url, function (error, response) {
   // Print the response status code if a response was received
+  if (error) {
+    console.error(error);
+    return;
+  }
   console.log('code: ', response.statusCode); 
 });
