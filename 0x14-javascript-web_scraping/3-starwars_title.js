@@ -5,7 +5,7 @@ const process = require('process');
 const args = process.argv;
 const id = parseInt(args[2]);
 
-const url = `https://swapi-api.alx-tools.com/api/film/${id}`;
+const url = `https://swapi-api.alx-tools.com/api/films/${id}`;
 request(url, (error, response, body) => {
   if (error) {
     console.error(error);
