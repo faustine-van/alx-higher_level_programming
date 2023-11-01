@@ -6,10 +6,13 @@ name must be displayed in the HTML tag DIV#character
 - using Jquery
 */
 $(document).ready(function () {
-  const url = 'https://swapi-api.alx-tools.com/api/films/?format=json';
-  $.getJSON(url, function (films) {
-    $.each(films.results, function (i, val) {
-      $('UL#list_movies').append($('<li></li>').text(val.title));
-    });
+  $.ajax({
+    type: 'GET',
+    url: 'https://swapi-api.alx-tools.com/api/films/?format=json',
+    success: function (films) {
+      $.each(films.results, function (i, val) {
+        $('UL#list_movies').append($('<li></li>').text(val.title));
+      });
+    }
   });
 });
